@@ -1,0 +1,250 @@
+/* Instellingen voor A3 Staand (Portrait: 297mm x 420mm) */
+@page {
+    size: A3 portrait;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #0b1120;
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Poster opgebouwd op basis van staand A3 formaat */
+.poster {
+    width: 297mm;
+    min-height: 420mm;
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    padding: 20mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+}
+
+/* Hero Sectie (Bovenaan) */
+.hero {
+    border-bottom: 3px solid #334155;
+    padding-bottom: 25px;
+}
+
+.event {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #38bdf8;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.hero h1 {
+    font-size: 4.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 16px;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+}
+
+.intro {
+    font-size: 1.5rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+/* Verticale opbouw: Van boven naar beneden */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 25px 0;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: rgba(30, 41, 59, 0.7);
+    padding: 22px 25px;
+    border-radius: 16px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.square {
+    width: 18px;
+    height: 18px;
+    background-color: #38bdf8;
+    border-radius: 4px;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.feature h2 {
+    font-size: 1.6rem;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.feature p {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+/* Tech Tags */
+.tech {
+    margin-top: 10px;
+}
+
+.tech h3 {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #64748b;
+    margin-bottom: 14px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tags span {
+    background: #334155;
+    color: #38bdf8;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+/* Screenshot Preview (Midden/Onder) */
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.6);
+    border: 2px dashed #334155;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.preview {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.caption {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* Footer met Contact & QR-code onderaan */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 3px solid #334155;
+    padding-top: 25px;
+    margin-top: auto;
+}
+
+.contact h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.contact p {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.contact a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* QR Code Container met tekst */
+.qrcode {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.qr img {
+    width: 110px;
+    height: 110px;
+    display: block;
+    object-fit: contain;
+}
+
+.qr-text {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Print instellingen voor direct opslaan als A3 PDF */
+@media print {
+    body {
+        padding: 0;
+        background: none;
+    }
+    .poster {
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
